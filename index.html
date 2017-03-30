@@ -28,9 +28,15 @@
 		<main role="main" >
 			<div class="product-card">
 				<div class="product-card__main">
+					<!-- По БЭМ мы можем вкладывать элемент в элемен, но название класса все равно фрмируеться как назване блока + название элемента
+					поэтому твой класс должен называться product-card__main-img. Для всех элементов блока вне зависимости от их аложеноости сначала
+					 имя блока потом элемента -->
+
 					<img class="product-card-main__img" src="img/Nike-SB-Max.png" alt="Nike-run">
 					<div class="product-card-main__circle">
 						<ul>
+							<!-- в таких случаях нужно использовать модификатор, так как БЭМ говорит что мы не можем использовать модификатор самостоятельно
+							то мы обьявляем элемент, а ему уже модификатов. Выглядеть это будет так class="product-card__main-circle circle--grey"-->
 							<li class="product-card-main-circle__grey"></li>
 							<li class="product-card-main-circle__white"></li>
 							<li class="product-card-main-circle__red"></li>
@@ -52,6 +58,8 @@
 					    </form>
 					</div> <!-- end product-info__acidjs-rating-stars -->
 					<div class="product-info__select">
+						<!-- По БЭМ элементы формы это блок, так как они используються в нескольких местах. Еще у БЭМ есть такой нюанс, если сомневаешься блок или
+						элемент используй блок -->
 						<select class="product-info-select__size">
 							<option>Size</option>
 							<option>21</option>
